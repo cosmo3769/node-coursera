@@ -1,5 +1,5 @@
 # node-coursera
-learning node 
+LEARNING NODE
 
 Node.js includes three modules
 
@@ -25,13 +25,13 @@ What we need here is node.js core modules-http,fs and url
 
 2.npm init -y(so that it can create package.json file and keep your work running with node)
 
-3.make index.js file and put some code in it(use of http,fs,url)
+3.Make index.js file and put some code in it(use of http,fs,url)
 
-4.make some files,like aboutme.html or anything.html.
+4.Make some files,like aboutme.html or anything.html.
 
 5.npm start in terminal(if no error, server will be running).
 
-6.  type in http://localhost:port/aboutme.html or anything.html in browser.
+6.Type in http://localhost:port/aboutme.html or anything.html in browser.
 
 7.This will take us to the right page according to the file name we enter.
 
