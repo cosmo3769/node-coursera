@@ -29,7 +29,7 @@ What we need here is node.js core modules-http,fs and url
 
 4.make some files,like aboutme.html or anything.html.
 
-5.npm start in terminal.(if no error, server will be running)
+5.npm start in terminal(if no error, server will be running).
 
 6.  type in http://localhost:port/aboutme.html or anything.html in browser.
 
