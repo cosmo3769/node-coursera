@@ -35,5 +35,26 @@ What we need here is node.js core modules-http,fs and url
 
 7.This will take us to the right page according to the file name we enter.
 
+#3 node_express - This is created to demonstrate the node third party module with core module. The third party module used here is express     
+                  and morgan. core module used here is http. 
+                  Here, a static web server is created.
+
+What we need here is node.js third party module-express,morgan and core module-http.
+
+1.First, just create a local folder with any name.
+
+2.npm init -y(so that it can create package.json file and keep your work running with node)
+
+3.Make index.js file and put some code in it(use of express, morgan, http)
+
+4.Make some files,like aboutme.html or anything.html.
+
+5.npm start in terminal(if no error, server will be running).
+
+6.Type in http://localhost:port/aboutme.html or anything.html in browser.
+
+7.This will take us to the right page according to the file name we enter.
+
 So easy it is, give it a try.
+
 
