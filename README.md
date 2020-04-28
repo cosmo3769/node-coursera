@@ -45,15 +45,19 @@ What we need here is node.js third party module-express,morgan and core module-h
 
 2.npm init -y(so that it can create package.json file and keep your work running with node)
 
-3.Make index.js file and put some code in it(use of express, morgan, http)
+3.Make index.js file.
 
-4.Make some files,like aboutme.html or anything.html.
+4.on terminal npm install express --save and npm install morgan --save to install the modules.
 
-5.npm start in terminal(if no error, server will be running).
+5. Write some code in index.js(use of express, morgan, http).
 
-6.Type in http://localhost:port/aboutme.html or anything.html in browser.
+6.Make some files,like aboutme.html or anything.html.
 
-7.This will take us to the right page according to the file name we enter.
+7.npm start in terminal(if no error, server will be running).
+
+8.Type in http://localhost:port/aboutme.html or anything.html in browser.
+
+9.This will take us to the right page according to the file name we enter. 
 
 So easy it is, give it a try.
 
