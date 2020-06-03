@@ -89,9 +89,28 @@ I have demonstrated the use of express routing in directory node_express_rest_ro
 
 # express_generator
 
+In this, I have demonstrated the use of express generator which quickly sets up an *application skeleton*
+
+*install the application generator as a global npm package and then launch it*
+**npm install -g express-generator**
+**express myapp** - This will create an express app in working directory.
+**npm install** - This will install all the dependencies.
+
 # node_mongo
 
+In this, I have demonstrated the use of MongoDB and assert module. 
+
+*MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional ***schemas.***.
+
+*The database schema of a database is it's structure desrcibed in a formal language supportes by DATABASE MANAGEMENT SYSTEM(DBMS). It actually describes how the data will be constructed in a database.*
+
+*The assert module provides a way of testing expressions. If the expression evaluates to 0, or false, an assertion failure is being caused, and the program is terminated.*
+
+In index.js, mongodb is connected to 'mongodb://localhost:27017/' and conFusion database is created. Under conFusion, collection of dishes is made, and one dish is entered, that dish is found,  and the operations is closed.(Following the **CRUD - CREATE, READ, UPDATE, DELETE**)
+
 # node_mongo_operations
+
+In the previous **node_mongo** directory, ***CRUD*** was not actually shown at full scale, but in this you can easily see the use of **CRUD - CREATE-READ-UPDATE-DELETE**. As in **operations.js**, in dishes collection document is created, found, updated and deleted and this operations.js file has been imported in **index.js** file where these operations are done.(*NOT deleted*)
 
 # node_mongo_callbackhell_promises
 
