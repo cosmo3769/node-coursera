@@ -92,8 +92,11 @@ I have demonstrated the use of express routing in directory node_express_rest_ro
 In this, I have demonstrated the use of express generator which quickly sets up an *application skeleton*
 
 *install the application generator as a global npm package and then launch it*
+
 **npm install -g express-generator**
+
 **express myapp** - This will create an express app in working directory.
+
 **npm install** - This will install all the dependencies.
 
 # node_mongo
