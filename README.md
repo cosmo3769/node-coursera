@@ -163,29 +163,29 @@ In this I have shown the use of basic auth, which is the use of **base64 string*
 
 ###### How does base64 works
 
-*Calculate the 8 bit binary version of the input text
+*Calculate the 8 bit binary version of the input text*
 
-*Re-group the 8 bit version of the data into multiple chunks of 6 bits
+*Re-group the 8 bit version of the data into multiple chunks of 6 bits*
 
-*Find the decimal version of each of the 6 bit binary chunk
+*Find the decimal version of each of the 6 bit binary chunk*
 
-*Find the Base64 symbol for each of the decimal values via a Base64 lookup table
+*Find the Base64 symbol for each of the decimal values via a Base64 lookup table*
 
 ***The easiest way to encode Base64 strings in Node.js is via the Buffer object. In Node.js, Buffer is a global object which means that you do not need to use require statement in order to use Buffer object in your applications. Internally Buffer is an immutable array of integers that is also capable of performing many different encodings/decodings. These include to/from UTF-8, UCS2, Base64 or even Hex encodings. As you write code that deals with and manipulates data, you'll likely be using the Buffer object at some point. Base64 doesn't use all the ASCII special characters, but only these few. Note that some implementations of Base64 uses different special characters than "+" and "/".***
 
 Here, I have used this **Buffer object** and **authorisation header** to show the use of basic authentication
 
-*The HTTP Authorization request header contains the credentials to authenticate a user agent with a server, usually, but not necessarily, after the server has responded with a 401 Unauthorized status and the WWW-Authenticate header. If the "Basic" authentication scheme is used, the credentials are constructed like this: 
+*The HTTP Authorization request header contains the credentials to authenticate a user agent with a server, usually, but not necessarily, after the server has responded with a 401 Unauthorized status and the WWW-Authenticate header. If the "Basic" authentication scheme is used, the credentials are constructed like this:*
 
-**the username and the password are combined with a colon (aladdin:opensesame).
+**the username and the password are combined with a colon (aladdin:opensesame).**
 
-**The resulting string is base64 encoded (YWxhZGRpbjpvcGVuc2VzYW1l).
+**The resulting string is base64 encoded (YWxhZGRpbjpvcGVuc2VzYW1l).**
 
 # cookies
 
 *Cookies are simple, small files/data that are sent to client with a server request and stored on the client side. Every time the user loads the website back, this cookie is sent with the request. This helps us keep track of the user’s actions. To use cookies with Express, we need the cookie-parser middleware.* ***cookie-parser is a middleware which parses cookies attached to the client request object.***
 
-***More precisely, when a server receives an HTTP request in the response, it can send a Set-Cookie header. The browser puts it into a cookie jar, and the cookie will be sent along with every request made to the same origin in the Cookie HTTP header. This way we don't have to write the username and password every time we reload the page as we have to do with basic authentication
+***More precisely, when a server receives an HTTP request in the response, it can send a Set-Cookie header. The browser puts it into a cookie jar, and the cookie will be sent along with every request made to the same origin in the Cookie HTTP header. This way we don't have to write the username and password every time we reload the page as we have to do with basic authentication***
 
 *Here signed cookies is used(only user), by which a server can tell if a cookie was modified by the client.*
 
