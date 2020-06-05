@@ -189,6 +189,10 @@ Here, I have used this **Buffer object** and **authorisation header** to show th
 
 *Here signed cookies is used(only user), by which a server can tell if a cookie was modified by the client.*
 
+# express_session_part_1
+
+# express_session_part_2
+
 So easy it is, give it a try.
 
 
