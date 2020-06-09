@@ -193,6 +193,10 @@ Here, I have used this **Buffer object** and **authorisation header** to show th
 
 # express_session_part_2
 
+# passport
+
+# jsonwebtoken
+
 So easy it is, give it a try.
 
 
