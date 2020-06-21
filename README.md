@@ -197,6 +197,37 @@ Here, I have used this **Buffer object** and **authorisation header** to show th
 
 # jsonwebtoken
 
+# https_secure_communication
+
+Previously, we were using http protocol to have a communication between client and server & how the user sends their credentials to their server from the client-side in either the header of their request message or the body of the request message and then subsequently, when they are authenticated, then their client will include either the cookie or the token in the header of the request message going from the client to the server. But as this http protocol is not a secure channel as many malicious people could easily interfere or tamper the communication. They can easily take the credentials and impersonate the client.
+
+*So what we are using here is a **https protocol** which gives us a secure channel to have a secure communication between the sender and receiver*
+
+*With https protocol, we also need to know something about **cryptography** *
+
+**What does cryptography involve**
+
+###### symmetric key cryptography
+
+*If you need to send a message over a channel to another user, then you would want to be able to encrypt the message in such a way that only the receiver will be able to decrypt the message and obtain the information that you are trying to send to the receiver. So both the sender and the receiver should understand on establish between the two of them how this encryption process and how the decryption is going to work.
+For this to work, any encryption and decryption works based on exchange of secret keys. So in* **symmetric key cryptography**, *both the sender and the receiver will share a secret key between the two sites, and this secret key is known only to the sender and to the receiver side. So when the sender needs to send the message, then the sender will encrypt this message using a cryptography algorithm, which uses the secret key as the other input to this algorithm. And once this message is passed through this cryptography algorithm, then an encrypted message will be generated. Now, this encrypted message will be sent to the channel across to the receiver side. If you have a third party malicious user sitting in between and listening and capturing this encrypted message, they would have a hard time decrypting this message because for decrypting an encrypted message, you still need the secret key. Now, on the receiver side, when the encrypted message is received, then the receiver will apply and a decryption algorithm, which also takes as the input, the same secret key that was used on the sender side to encrypt the message. So upon decryption, the original message will be retrieved and can be processed on the receiver side. Now, if a malicious third party wants to decrypt this encrypted message, they are going to face an uphill battle because the process of encrypting using the secret key will turn the message and can, in turn, encrypt the message. Without possessing the secret key, it is going to be next to impossible to decrypt the encrypted message.*
+
+***Of course, with the symmetric key cryptography, one of the issues is that both the sender and the receiver needs to have access to the same secret key. Now, if the sender and receiver are communicating over an insecure channel, it is going to be difficult for both sides to come to an understanding about the same secret key without disclosing it to others. So this is where another algorithm called*** 
+**public-key cryptography** ***is very useful***
+
+###### public key cryptgraphy
+
+*In this, we have two keys -* ***public key*** *&* ***private key*** *Now, the public key can be widely distributed to anyone that you want.
+So when somebody wants to send a message to you, they are going to use your public key to encrypt the message. So if a sender here wants to send the message to the receiver, then the sender will use the public key off the receiver to encrypt the message on the sender side using the encryption algorithm. Now, once the encrypted message is sent across over the insecure channel to the receiver side, the receiver will then use the private key that only the receiver knows in order to decrypt*
+
+***But this public key cryptography cannot be used always because it's expensive, so over some communication public key cryptography is used and all the other communications are managed with symmetric key cryptography***
+
+###### Secure sockets layer(SSL) | Transport Layer Security(TLS)
+
+*These cryptography protocols enable secure communication between the sender and the receiver over an insecure network like the Internet.
+The sender and the receiver will communicate over this Internet using encrypted messages, which only the sender and the receiver can decrypt. And this approach, either the SSL or TLS, uses a combination of public-key cryptography together with symmetric key cryptography. 
+With this, we are trying to maintain two different things. We are, first, trying to maintain the privacy of the communication between the sender and the receiver so that no malicious third party can extract the message from the encrypted message. Second, we are also trying to maintain integrity, meaning that when the sender sends a message, the receiver will be able to be assured that the message has not being tampered with.*
+
 So easy it is, give it a try.
 
 
