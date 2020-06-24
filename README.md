@@ -246,6 +246,8 @@ Now, since the client possesses the same session key, the client will be able to
 
 *In **www file** under **bin folder** and in **app.js file**, https server is created, & if the request is directed to http port, it automaticaly gets redirected to https server so the communication could be served in a secure channel.*
 
+# Uploading_files
+
 So easy it is, give it a try.
 
 
