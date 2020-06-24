@@ -236,6 +236,16 @@ it will be exactly the same session key, because both will follow exactly the sa
 the client will encrypt the data using the secret session key, and then send over their data. Similarly, when the server needs to communicate with the client, the server will obviously use the same session key to encrypt the data and then send it over to the client.
 Now, since the client possesses the same session key, the client will be able to decrypt the message and extract the unencrypted message.* 
 
+*In bin folder, first private key is generated and certified with this three commands*
+
+**openssl genrsa 1024 > private.key**
+
+**openssl req -new -key private.key -out cert.csr**
+
+**openssl x509 -req -in cert.csr -signkey private.key -out certificate.pem**
+
+*In **www file** under **bin folder** and in **app.js file**, https server is created, & if the request is directed to http port, it automaticaly gets redirected to https server so the communication could be served in a secure channel.*
+
 So easy it is, give it a try.
 
 
