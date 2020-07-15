@@ -248,6 +248,31 @@ Now, since the client possesses the same session key, the client will be able to
 
 # Uploading_files
 
+When we fill out the form, we encounter with file upload feature, where we have to upload our file to the server side. For example :- suppose you are uploading the information about a dish to the server-side. Then you will wish to also upload the corresponding image of the dish to the server-side. So in the process, you will first upload the image of the dish to the server-side, obtain a URL for that image from the server-side wherever it is uploaded and stored, and then use that image in the JSON document that describes the dish in detail.
+So that subsequently, when clients retrieve the JSON document describing the dish in order to render the UI, then, from within the JSON document, they'll be able to obtain the URL of the dish image that has been uploaded to the server-side. And then use it in constructing the UI.
+
+*File uploading is typically supported through form input <input type="file" name="imageFile">
+
+*Form data typically encoded as
+
+***application/x-www-form-urlencoded***
+
+***multipart/form data***
+
+***applied as <form action="/imageupload" method="post" enctype="multipart/form-data">***
+
+*Here the form action is set to the REST api endpoint /imageupload where with the method POST will be uploaded to the server side and the uploaded file will be encoded with multipart/form-data and then send to the server side.*
+
+*when multipart/form-data is included in the http request message that is going in to the server side, then in the header of the request message, you will have a content type set to multipart/form-data. And then also a boundary value set up like that. The boundary separates the multiple parts of the request body. So the request body itself of the outgoing request message will be divided into multiple parts. And each part will be delineated from the previous part by by using this boundary here.
+
+**'content--type':'multitype/form-data; boundary=-----------------------63544783383763744747;'**
+
+**'content-disposition':form-data;name="imagefile";filename="alberto.png"'**
+
+*When the client will upload the file in the ui side, the file will be encoded with multipart/form-data which goes in the http request message to the server side. This multipart/form-data will contain the boundary which contains various parts of the file, the server side extracts this information from the boundary and save the file in the server side as given in the ui side*
+
+**MULTER - node middleware to handle the incoming file encoded with multipart/form-data, written on top of busboy, a node module for parsing incoming html form data, parses the incoming form data and add req.body and req.file object to request object.**
+
 So easy it is, give it a try.
 
 
