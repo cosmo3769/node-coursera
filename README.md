@@ -273,6 +273,10 @@ So that subsequently, when clients retrieve the JSON document describing the dis
 
 **MULTER - node middleware to handle the incoming file encoded with multipart/form-data, written on top of busboy, a node module for parsing incoming html form data, parses the incoming form data and add req.body and req.file object to request object.**
 
+**npm install multer --save**
+
+*make a uploadRouter.js file in routes, and add some code.*
+
 So easy it is, give it a try.
 
 
